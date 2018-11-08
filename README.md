@@ -13,17 +13,20 @@ Data was collected via the Reddit API.  The original posts were collected on the
 Post graduation of G.A.'s Data Science Intensive I (Terra Riley) have started collecting data starting on the date 10/29/2018 (which is erroniously labeled as 10_30 in places as of the time of this writing) from a larger pool of subreddits.
     
 ## EDA
-Due to circumstances beyond my control there was very little to no EDA as of the current version of the subreddit project.
-Post Graduation: I plan to perform basic EDA allong with Topic Modeling and to apply the Word2Vec/Doc2Vec functions for [a certain] python library.
+By looking at words most correlated to one subreddit or the other we can infer what these forums have most different from eachother. Some of which were obvious, such as words being associated with sexuality having a high correlation to the lesbian forum, but others are more odd, like how the use of words like "month", "time", "week" and "ago" seeming to point to a higher mention of recent or future timeframes when compaired to the incels. For the incels this seems to have sifted those words around thier specific ingroup terminology such as "chad", "oneitis" and "blackpill".
     
 ## Modeling
 Original modeling utilized a random forest classifier and a multinomial Neïve Bayes Classifier.
 
 ## Results
-|      |Multinomial Neïve Bayes Scores:|Random Forest Scores:    |
-|------|-------------------------------|-------------------------|
-|Train:|Train: 0.9513513513513514      |Train: 0.9932432432432432|
-|Test: |Test: 0.8704453441295547       |Test: 0.8218623481781376 | 
+|Model                  | Train             |Test               |
+|-----------------------|-------------------|-------------------|
+|Multinomial Neïve Bayes|0.9263513513513514 |0.8663967611336032 |
+|Logistic Regression    |0.977027027027027  |0.8421052631578947 |
+|Extra Trees            |0.9898648648648649 |0.8016194331983806 |
+|Gradient Boost         |0.8722972972972973 |0.7975708502024291 |
+|K Nearest Neighbors    |0.7763513513513514 |0.6497975708502024 |
+|Support Vector Machine |0.6054054054054054 |0.6376518218623481 |
     
 ## Future Steps
 Compare results and EDA of various subreddits based on sexaulity and gender
